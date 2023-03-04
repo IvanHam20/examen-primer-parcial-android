@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="30sp"
+        android:background="#000000"
+        android:text="La capital del cine"
+        android:textAlignment="center"
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvPieDePagina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="40sp"
+        android:background="#3F51B5"
+        android:text="Cinépolis Altama"
+        android:textAlignment="center"
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="152dp" />
+
+    <TextView
+        android:id="@+id/tvTitleMovie"
+        android:layout_width="158dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:text="Ant-Man and The Wasp: Quantumania"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:autoSizeTextType="none"
+        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintTop_toBottomOf="@+id/tvPieDePagina" />
+
+    <TextView
+        android:id="@+id/tvDescrpcion"
+        android:layout_width="168dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:text="Ant-Man and The Wasp: Quantumania (EUA, 2023)"
+        android:textColor="#5C5656"
+        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleMovie" />
+
+    <TextView
+        android:id="@+id/tvInstruccion"
+        android:layout_width="201dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Por favor seleccione un horario: "
+        android:textColor="#5C5656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPoster" />
+
+    <Spinner
+        android:id="@+id/spHorarios"
+        android:entries="@array/misHorarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstruccion" />
+
+    <ImageView
+        android:id="@+id/ivPoster"
+        android:layout_width="160dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPieDePagina"
+        app:srcCompat="@drawable/poster" />
+
+    <TextView
+        android:id="@+id/tvClasificacion"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#756666"
+        android:text="B"
+        android:textAlignment="center"
+        android:textColor="#F6F3F3"
+        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescrpcion" />
+
+    <TextView
+        android:id="@+id/tvGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:width="165sp"
+        android:background="#1A0AEF"
+        android:text="Aventura, Ciencia Ficción"
+        android:textAlignment="center"
+        android:textColor="#F8F3F3"
+        app:layout_constraintStart_toEndOf="@+id/tvDuracion"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescrpcion" />
+
+    <TextView
+        android:id="@+id/tvDuracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:width="60sp"
+        android:background="#000000"
+        android:text="125 min"
+        android:textAlignment="center"
+        android:textColor="#FFFDFD"
+        app:layout_constraintStart_toEndOf="@+id/tvClasificacion"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescrpcion" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bnComprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:width="180sp"
+        android:background="@drawable/color"
+        android:text="Comprar Boletos"
+        android:textColor="#040404"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
